@@ -1,0 +1,87 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Tribute page</title>
+  <meta charset='UTF-8'>
+  <meta name="author" content="Mamkwe Tarimo">
+  <meta name="description" content="Martin Luther Tribute Page">
+  <meta name="viewport" content="width=device-width,
+  initial-scale=1.0">
+  <link rel='stylsheet' href='styles.css'>
+  </head>
+  <body>
+    <main id='main'>
+      <h1 id='title'>Martin Luther<h1>
+        <figure id='img-div'>
+          <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/0/05/Martin_Luther_King%2C_Jr..jpg" alt="Martin Luther King Jr." >
+          <figcaption id='img-caption'> Martin Luther King Jr.</figcaption></figure>
+          <section>
+        <p id='tribute-info'>Martin Luther was a German professor of theology, composer, priest, and monk, and a seminal figure in the Protestant Reformation. Luther came to reject several teachings and practices of the Roman Catholic Church. He strongly disputed the claim that freedom from God's punishment for sin could be purchased with money, proposing an academic discussion of the practice and efficacy of indulgences in his Ninety-five Theses of 1517. His refusal to retract all of his writings at the demand of Pope Leo X in 1520 and the Holy Roman Emperor Charles V at the Diet of Worms in 1521 resulted in his excommunication by the Pope and condemnation as an outlaw by the Emperor.Find his full life history on <a href="https://en.wikipedia.org/wiki/Martin_Luther"target='_blank' id='tribute-link'>wikipedia.</a></p></section>
+    </main>
+  </body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+#image{
+  display:block;
+  max-width:100%;
+  height:auto;
+  margin:auto;
+}
+ body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: #f0f0f0;
+        }
+main {
+    width:100%;
+    max-width: 500px;
+    margin: 2em auto;
+    background-color: grey;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size:8px;
+        }
+#title {
+     text-align: center;
+     font-weight:700;
+      color: black;
+      font-size:4em;
+        }
+#img-div {
+      text-align:justify;
+      margin-top: 20px;
+        }
+        
+#img-caption {
+            font-style: italic;
+            color: #666;
+            margin-top: 10px;
+text-align:center;
+        }
+#tribute-info {
+          line-height: 1.5;
+            color: black;
+          font-weight:500;
+          margin:auto;
+        }
+#tribute-link {
+            text-align: center;
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+        }
+#tribute-link:hover {
+          color:blue;
+          text-decoration: underline;
+}
+
+** end of undefined **
+
