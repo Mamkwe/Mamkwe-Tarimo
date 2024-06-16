@@ -1,0 +1,91 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telephone Number Validator</title>
+    <link rel='stylesheet' href='styles.css'
+</head>
+<body>
+    <div id="container">
+        <h1>Telephone Number Validator</h1>
+        <input type="text" id="user-input" placeholder="Enter phone number"/>
+        <button  id='check-btn' >Check</button>
+        <button id="clear-btn">Clear</button>
+        <div id="results-div"></div>
+    </div>
+
+    <script src="script.js"></script>
+    </body>
+    </html>
+
+** end of undefined **
+
+** start of undefined **
+
+body {
+            font-family: Arial, sans-serif;
+ margin: 0;
+padding: 0;
+display: flex;         justify-content: center;             height: 100vh;     background-color: skyblue;
+        }
+ #container {
+            text-align: center;
+}
+input[type="text"] {
+    padding: 10px;
+    margin-bottom: 20px;
+   width: 300px;
+border-radius:10px;    
+ font-size: 16px;
+ }
+button {
+  padding: 10px 20px;
+font-size: 16px;
+cursor: pointer;
+
+}
+ #results-div{
+ font-size: 16px;
+margin-top: 10px;
+ }
+
+** end of undefined **
+
+** start of undefined **
+
+document.addEventListener('DOMContentLoaded',  ()=> {
+    const userInput = document.getElementById('user-input');
+    const checkBtn = document.getElementById('check-btn');
+    const clearBtn = document.getElementById('clear-btn');
+    const resultsDiv = document.getElementById('results-div');
+
+    checkBtn.addEventListener('click', ()=> {
+        const phoneNumber = userInput.value.trim();
+        if (phoneNumber === '') {
+            alert('Please provide a phone number');
+            return;
+        }
+        const isValid = validatePhoneNumber(phoneNumber);
+        if (isValid) {
+            resultsDiv.textContent = `Valid US number: ${phoneNumber}`;
+        } else {
+            resultsDiv.textContent = `Invalid US number: ${phoneNumber}`;
+        }
+    });
+
+    clearBtn.addEventListener('click',  ()=> {
+        resultsDiv.textContent = '' ;
+
+    });
+
+    const validatePhoneNumber=(phoneNumber)=> {
+        const phonePattern = /^(1\s?)?(\(\d{3}\)|\d{3})[\s.-]?\d{3}[\s.-]?\d{4}$/;
+        return phonePattern.test(phoneNumber);
+    }
+});
+
+** end of undefined **
+
