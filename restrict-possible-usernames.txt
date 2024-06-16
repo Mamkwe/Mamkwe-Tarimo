@@ -1,0 +1,4 @@
+let username = "JackOfAllTrades";
+//using regex to meet username rules;
+let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i; 
+let result = userCheck.test(username);
