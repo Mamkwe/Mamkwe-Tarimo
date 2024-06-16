@@ -1,0 +1,111 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palindrome Checker</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    
+      <h1>Palindrome Checker</h1>
+        <fieldset class='container'>
+          <label>Enter in text to check for a palindrome:</label for=""text-input"">
+          <input id="text-input" >
+          <button id="check-btn" type="button">check</button>
+          <div id="result"></div>
+        </fieldset>
+        <fieldset class='container1 '><div class="def">A palindrome is a term or phrase that reads the same forwards and backwards, disregarding punctuation, capitalization, and spaces.
+
+        </div></fieldset>
+    
+<script src="script.js"></script>
+  </body>
+  </html>
+
+
+** end of undefined **
+
+** start of undefined **
+
+*,::before,::after{
+  margin:0;
+  padding:0;
+box-sizing:border-box;
+}
+body{
+  background-color:green;
+  width:100%;
+  height:100vh;
+  color:white;
+}
+h1{
+  text-align:center;
+}
+
+fieldset{
+  width:60%;
+  max-width:400px;
+  height:auto;
+  border:2px solid black;
+  margin:20 auto;
+  padding:4px;
+  font-size:1.2em;
+  border-radius:10px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+}
+.container {
+  text-align:center;
+  height:30%;
+}
+input{
+  margin-top:20px;
+}
+
+button{
+  display:inline;background-color:maroon;
+  color:inherit;
+  width:70px;
+  border-radius:10px;
+  margin-top:10px;
+}
+.container1 {
+  text-align:center;
+  background-color:blue;
+  padding:1em;
+
+}
+
+** end of undefined **
+
+** start of undefined **
+
+const textInput=document.getElementById("text-input")
+const checkBtn=document.getElementById("check-btn")
+const results=document.getElementById("result")
+checkBtn.addEventListener("click",function() {
+   if (textInput.value === '') {
+    alert("Please input a value");
+    return; 
+  }
+const inputText = textInput.value.toLowerCase();
+  const reversedText = inputText.split('').reverse().join('');
+  const cleanInput = inputText.replace(/[^a-z0-9]/g, '');
+    const cleanReversed = reversedText.replace(/[^a-z0-9]/g, '');
+  if (cleanInput === cleanReversed) {
+      results.textContent = `${textInput.value} is a palindrome`;
+    } else {
+      results.textContent = `${textInput.value} is not a palindrome`; 
+    }
+ 
+});
+
+
+** end of undefined **
+
